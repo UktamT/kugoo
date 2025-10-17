@@ -1,0 +1,21 @@
+<svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="19.000000" fill="none">
+	<defs>
+		<g id="pixso_custom_effect_0">
+			<effect x="0.000000" y="4.000000" visibility="visible" fill="rgb(0,0,0)" fill-opacity="0.250980407" effectType="dropShadow" stdDeviation="4" radius="0" />
+		</g>
+		<filter id="filter_0" width="20.000000" height="19.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_0)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="0.000000" dy="4.000000" in="hardAlpha" />
+			<feGaussianBlur stdDeviation="1.33333337" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="out" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25098 0 " />
+			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+		</filter>
+	</defs>
+	<g filter="url(#filter_0)">
+		<rect id="003-telegram 1" width="12.000000" height="12.000000" x="4.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	</g>
+	<path id="Vector" d="M8.70859 7.5907L8.51009 10.3827C8.79409 10.3827 8.91709 10.2607 9.06459 10.1142L10.3961 8.84171L13.1551 10.8622C13.6611 11.1442 14.0176 10.9957 14.1541 10.3967L15.9651 1.9107L15.9656 1.9102C16.1261 1.1622 15.6951 0.869703 15.2021 1.0532L4.55709 5.1287C3.83059 5.4107 3.84159 5.8157 4.43359 5.9992L7.15509 6.8457L13.4766 2.8902C13.7741 2.6932 14.0446 2.8022 13.8221 2.9992L8.70859 7.5907Z" fill="rgb(93,108,123)" fill-rule="nonzero" />
+</svg>

@@ -1,0 +1,49 @@
+.root{
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.card{
+  border: 1px solid #EAEBED;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.image{
+  width: 242px;
+  height: 225px;
+}
+
+.title{
+  font-weight: 600;
+  font-size: 18px;  
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding: 10px 0 30px;
+}
+
+.specifications{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.atributes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.span{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
