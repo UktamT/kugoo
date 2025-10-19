@@ -19,6 +19,7 @@
   color: #2e2e2e;
   border-right: 1px solid rgba(108, 99, 255, 0.3);
   height: 100%;
+  cursor: pointer;
 }
 
 .searchSelect img {
@@ -64,4 +65,40 @@
   width: 16px;
   height: 16px;
   filter: brightness(0) invert(1);
+}
+
+.optionsActive{
+  position: absolute;
+  background: #F4F7FB;
+  padding: 12px;
+  border-radius: 10px;
+  left: 717px;
+  top: 120px;
+}
+
+.optionsDisactive{
+  display: none;
+}
+
+.optionFirst{
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 0 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.optionFirst:hover{
+  color: #6F73EE;
+}
+
+.option{
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.option:hover{
+  color: #6F73EE;
 }

@@ -1,10 +1,37 @@
 .root{
   color: var(--Purple, rgba(111, 115, 238, 1));
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   cursor: pointer;
-  padding: 15px 25px;
+  padding: 12px 20px;
   border: 1.3px solid var(--Purple, rgba(111, 115, 238, 1));
   border-radius: 5px;
   background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.root:hover{
+  background: var(--Purple, rgba(111, 115, 238, 1));
+  border: 1.3px solid var(--Purple, rgba(111, 115, 238, 1));
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.unactive{
+  color: #545353;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 12px 20px;
+  border: 1px solid #F4F7FB;
+  border-radius: 5px;
+  background: #F4F7FB;
+  transition: all 0.3s ease-in-out;
+}
+
+.unactive:hover{
+  background: transparent;
+  border: 1px solid #C1C5D0;
+  cursor: pointer;
+  color: #545353;
 }

@@ -4,11 +4,13 @@ import styles from './ButtonView.module.scss'
 
 interface ButtonViewProps {
   title: string
+  onClick?: () => void
+  active?: boolean
 }
 
-const ButtonView = ({title}: ButtonViewProps) => {
+const ButtonView = ({title, onClick, active}: ButtonViewProps) => {
   return (
-    <button className={styles.root}>{title}</button>
+    <button onClick={onClick} className={active ? styles.root : styles.unactive}>{title}</button>
   )
 }
 
