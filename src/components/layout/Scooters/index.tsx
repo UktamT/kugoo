@@ -3,9 +3,10 @@ import ScooterCart from '../../ui/ScooterCard'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { setScooterPage, setActiveCategory } from '../../../redux/slices/scooterPageSlice'
+import { setPage, setResetPage } from '../../../redux/slices/scootersSlice'
 import styles from './Scooters.module.scss'
 import ButtonView from '../../ui/ButtonView'
-import CategoryLoading from '../../ui/CategoryLoading' // компонент скелетона категорий
+import CategoryLoading from '../../ui/CategoryLoading'
 
 interface Category {
   id: number
@@ -45,7 +46,10 @@ const Scooters = () => {
   const dispatch = useDispatch()
 
   const [isLoading, setIsLoading] = useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
   const [skeletonCount, setSkeletonCount] = useState(5)
+  const [additionalScooters, setAdditionalScooters] = useState<Scooter[]>([])
+
 
   useEffect(() => {
     const fetchScooterPage = async () => {
@@ -65,6 +69,28 @@ const Scooters = () => {
     active === 'Все'
       ? scooters
       : scooters.filter((item: Scooter) => item.recomendation === active)
+
+  const handleLimit = async () => {
+  if (isOpen) {
+
+    setIsOpen(false)
+    setAdditionalScooters([])
+    dispatch(setResetPage())
+  } else {
+
+    setIsOpen(true)
+    dispatch(setPage())
+
+    try {
+      const res = await axios.get('http://localhost:3002/kugoosDop')
+      setAdditionalScooters(res.data)
+    } catch (err) {
+      console.error('Ошибка при загрузке дополнительных самокатов:', err)
+    }
+  }
+}
+
+
 
   return (
     <div>
@@ -86,8 +112,15 @@ const Scooters = () => {
                 ))}
           </div>
         </div>
+        
+        <ScooterCart scootersFilter={[...filterCategory, ...additionalScooters]} />
 
-        <ScooterCart scootersFilter={filterCategory} />
+        
+        <div className={styles.buttonAll}>
+          <ButtonView onClick={() => handleLimit()} title={isOpen ? "Закрыть" : 'Смотреть все'} />
+        </div>
+
+        
       </div>
     </div>
   )

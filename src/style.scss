@@ -8,6 +8,17 @@
   font-family: Jost, sans-serif;
 }
 .container{
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
+}
+
+/* App.module.scss */
+.appRoot {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* занимает всю высоту окна */
+}
+
+.content {
+  flex: 1; /* растягивает контент, чтобы футер ушел вниз */
 }

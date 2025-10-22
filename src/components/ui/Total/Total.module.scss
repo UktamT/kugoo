@@ -1,0 +1,46 @@
+.root{
+  background: #F4F7FB;
+  padding: 25px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 345px;
+}
+
+.root:hover{
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.price{
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(218, 215, 215);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cost{
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.priceSecond{
+  font-size: 19px;
+  font-weight: 500;
+  padding-bottom: 11px;
+}
+
+.flexLast{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(218, 215, 215);
+  margin-bottom: 20px;  
+  padding-bottom: 10px;
+}

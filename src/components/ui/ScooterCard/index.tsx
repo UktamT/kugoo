@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { setScooters } from '../../../redux/slices/scootersSlice'
+import { setCart } from '../../../redux/slices/cartSlice'
 
 import CardLoading from '../../ui/CardLoading'
 
@@ -12,30 +13,81 @@ import speedometer from '../../../assets/speedometer.svg'
 import timer from '../../../assets/timer.svg'
 import cart from '../../../assets/shopping-cart-2 1.svg'
 import heart from '../../../assets/heart.svg'
+import check from '../../../assets/check.png'
 
 import styles from './Scooter.module.scss'
 
 const ScooterCart = ({ scootersFilter }: any) => {
   const dispatch = useDispatch()
+  const limit = useSelector((state: any) => state.scooters.limit)
+  const cartItems = useSelector((state: any) => state.cart.items)
 
   const [isLoading, setIsLoading] = React.useState(true)
   const [skeletonCount, setSkeletonCount] = React.useState(4)
+  const [page, setPage] = React.useState(1)
+  
 
   useEffect(() => {
+    setIsLoading(true)
     axios
-      .get('https://68ee7b85df2025af7803da1f.mockapi.io/kugoos')
+      .get(`http://localhost:3002/kugoos`)
       .then((res) => {
         dispatch(setScooters(res.data))
         setSkeletonCount(res.data.length)
-        setIsLoading(false)
       })
       .catch((error) => {
         console.error('Ошибка при загрузке данных:', error)
       })
-  }, [dispatch])
+      .finally(() => setIsLoading(false))
+  }, [dispatch, limit])
+
+  const handleAddToCart = async (scooter: Scooter) => {
+    try {
+      const isInCart = cartItems.some((item: any) => item.id === scooter.id)
+
+      if (isInCart) {
+        console.log('Товар уже в корзине')
+        return
+      }
+
+      await axios.post('http://localhost:3002/cart', {
+        id: scooter.id,
+        title: scooter.title,
+        price: scooter.price,
+        image: scooter.image,
+        mAh: scooter.mAh,
+        recomendation: scooter.recomendation,
+        checkpoint: scooter.checkpoint,
+        power: scooter.power,
+        speed: scooter.speed,
+        limit: scooter.limit,
+        ready: scooter.ready,
+        count: 1
+      })
+
+      dispatch(setCart({
+        id: scooter.id,
+        title: scooter.title,
+        price: scooter.price,
+        image: scooter.image,
+        mAh: scooter.mAh,
+        recomendation: scooter.recomendation,
+        checkpoint: scooter.checkpoint,
+        power: scooter.power,
+        speed: scooter.speed,
+        limit: scooter.limit,
+        ready: scooter.ready,
+        count: 1
+      }))
+    } catch (error) {
+      console.error('Ошибка:', error)
+    }
+}
+
+
 
   interface Scooter {
-    id: number
+    id: number | string
     image: string
     title: string
     mAh: string
@@ -43,8 +95,9 @@ const ScooterCart = ({ scootersFilter }: any) => {
     power: string
     limit: string
     checkpoint: string
-    price: number
+    price: number | string
     ready: string;
+    recomendation: string
   }
 
   if (isLoading) {
@@ -62,8 +115,10 @@ const ScooterCart = ({ scootersFilter }: any) => {
   return (
     <div className="container">
       <div className={styles.root}>
-        {scootersFilter.map((scooter: Scooter) => (
-          <div className={styles.card} key={scooter.id}>
+        {scootersFilter.map((scooter: Scooter) => {
+          const isInCart = cartItems.some((item: any) => item.id === scooter.id)
+          return (
+            <div className={styles.card} key={scooter.id}>
             <div className={styles.specifications}>
               <p
                 className={
@@ -109,17 +164,19 @@ const ScooterCart = ({ scootersFilter }: any) => {
             <div className={styles.buy}>
               <p className={styles.price}>{scooter.price} ₽</p>
               <div className={styles.icons}>
-                <img className={styles.icon} src={cart} alt="" />
+                <img onClick={() => handleAddToCart(scooter)} className={styles.icon} src={isInCart ? check : cart} alt="" />
                 <img className={styles.icon} src={heart} alt="" />
               </div>
             </div>
-
             <button
               className={scooter.ready === 'true' ? styles.btn : styles.notReady}>
-              {scooter.ready === 'true' ? "Купить в один клик": 'Оформить предзаказ'}
+              {scooter.ready === 'true' ? 'Купить в 1 клик' : 'Оформить предзаказ'}
             </button>
+            
           </div>
-        ))}
+          )
+          
+})}
       </div>
     </div>
   )

@@ -1,0 +1,28 @@
+.title{
+  font-weight: 600;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: black;
+
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 70px;
+}
+
+.span{
+  color: #5D6C7B;
+}
+.count{
+  margin: 10px 0 40px;
+  color: #5D6C7B;
+}
+
+.flexPrice{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}

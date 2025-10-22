@@ -1,20 +1,20 @@
 .root{
-  color: var(--Purple, rgba(111, 115, 238, 1));
+  color: white;
   font-size: 12px;
   font-weight: 400;
   cursor: pointer;
   padding: 12px 20px;
   border: 1.3px solid var(--Purple, rgba(111, 115, 238, 1));
   border-radius: 5px;
-  background: transparent;
+  background: var(--Purple, rgba(111, 115, 238, 1));
   transition: all 0.3s ease-in-out;
 }
 
 .root:hover{
-  background: var(--Purple, rgba(111, 115, 238, 1));
+  background: transparent;
   border: 1.3px solid var(--Purple, rgba(111, 115, 238, 1));
   cursor: pointer;
-  color: #FFFFFF;
+  color: var(--Purple, rgba(111, 115, 238, 1));
 }
 
 .unactive{

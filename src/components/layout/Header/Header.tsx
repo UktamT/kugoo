@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss'
 
 import viber from '../../../assets/viber 1.svg'
@@ -56,9 +57,12 @@ const Header = () => {
       </div>
 
       <div className={styles.headerSecond}>
-        <h1>
-          KUGOO
-        </h1>
+        <Link to={'/'}>
+          <h1 className={styles.mainTitle}>
+            KUGOO
+          </h1>
+        </Link>
+        
 
         <button onClick={() => handleCatalog()} className={styles.catalogBtn}>
           <span className={styles.burger}>
@@ -74,10 +78,14 @@ const Header = () => {
         <div className={styles.rightSide}>
           <img src={weigth} alt="" />
           <img src={heart} alt="" />
-          <div className={styles.cart}>
-            <img src={cart} alt="" />
-            <p>Корзина</p>
-          </div>
+
+          <Link to={'/cart'}>
+            <div className={styles.cart}>
+              <img src={cart} alt="" />
+              <p className={styles.cartTitle}>Корзина</p>
+            </div>
+          </Link>
+          
         </div>
       </div>
 

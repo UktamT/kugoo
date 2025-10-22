@@ -1,0 +1,162 @@
+{
+  "cart": [
+    {
+      "id": "2",
+      "title": "KuKirin S3 PRO",
+      "price": "39 000",
+      "image": "https://kugoo.kg/storage/vehicles/February2025/Gqv47QOwm8kKw4vuiWfT.webp",
+      "mAh": "18000 mAh",
+      "recomendation": "Для взрослых",
+      "checkpoint": "ХИТ",
+      "power": "1,2 л.с.",
+      "speed": "35 км/ч",
+      "limit": "5 часов",
+      "ready": "true",
+      "count": 1
+    },
+    {
+      "id": "3",
+      "title": "KuKirin M4 PRO 18 AH",
+      "price": "29 000",
+      "image": "https://kugoo.kg/storage/vehicles/February2025/TKCEtpfsiAmwOfTEvsbs.webp",
+      "mAh": "5000 mAh",
+      "recomendation": "Хиты продаж",
+      "checkpoint": "НОВИНКА",
+      "power": "1,2 л.с.",
+      "speed": "55 км/ч",
+      "limit": "3 часов",
+      "ready": "true",
+      "count": 1
+    },
+    {
+      "id": "4",
+      "title": "KUGOO M5",
+      "price": "77 060",
+      "image": "https://kugoo.kg/storage/vehicles/February2025/V5Y0rpVBb7tWRX4JkpVL.webp",
+      "mAh": "6000 mAh",
+      "recomendation": "Для города",
+      "checkpoint": "ХИТ",
+      "power": "1,2 л.с.",
+      "speed": "65 км/ч",
+      "limit": "7 часов",
+      "ready": "false",
+      "count": 1
+    }
+  ],
+  "kugoos": [
+    {
+      "id": "1",
+      "title": "Kugoo Kirin M4",
+      "mAh": "7500 mAh",
+      "power": "1,2 л.с.",
+      "speed": "30 км/ч",
+      "limit": "4 часов",
+      "price": "24 000",
+      "checkpoint": "ХИТ",
+      "recomendation": "Для детей",
+      "image": "https://kugoo.kg/storage/vehicles/March2023/d0VDunX253UUtFxuQpes.jpg",
+      "ready": "false",
+      "count": 1
+    },
+    {
+      "id": "2",
+      "title": "KuKirin S3 PRO",
+      "mAh": "18000 mAh",
+      "power": "1,2 л.с.",
+      "speed": "35 км/ч",
+      "limit": "5 часов",
+      "price": "39 000",
+      "checkpoint": "ХИТ",
+      "recomendation": "Для взрослых",
+      "image": "https://kugoo.kg/storage/vehicles/February2025/Gqv47QOwm8kKw4vuiWfT.webp",
+      "ready": "true",
+      "count": 1
+    },
+    {
+      "id": "3",
+      "title": "KuKirin M4 PRO 18 AH",
+      "mAh": "5000 mAh",
+      "power": "1,2 л.с.",
+      "speed": "55 км/ч",
+      "limit": "3 часов",
+      "price": "29 000",
+      "checkpoint": "НОВИНКА",
+      "recomendation": "Хиты продаж",
+      "image": "https://kugoo.kg/storage/vehicles/February2025/TKCEtpfsiAmwOfTEvsbs.webp",
+      "ready": "true",
+      "count": 1
+    },
+    {
+      "id": "4",
+      "title": "KUGOO M5",
+      "mAh": "6000 mAh",
+      "power": "1,2 л.с.",
+      "speed": "65 км/ч",
+      "limit": "7 часов",
+      "price": "77 060",
+      "checkpoint": "ХИТ",
+      "recomendation": "Для города",
+      "image": "https://kugoo.kg/storage/vehicles/February2025/V5Y0rpVBb7tWRX4JkpVL.webp",
+      "ready": "false",
+      "count": 1
+    }
+  ],
+  "kugoosDop": [
+    {
+      "id": "5",
+      "title": "KUGOO M5",
+      "mAh": "6000 mAh",
+      "power": "1,2 л.с.",
+      "speed": "65 км/ч",
+      "limit": "7 часов",
+      "price": "77 060",
+      "checkpoint": "ХИТ",
+      "recomendation": "Для города",
+      "image": "https://kugoo.kg/storage/vehicles/July2023/jW46q1hoVEkMGwx5EZkJ.jpg",
+      "ready": "false",
+      "count": 1
+    },
+    {
+      "id": "6",
+      "title": "KUGOO M5",
+      "mAh": "6000 mAh",
+      "power": "1,2 л.с.",
+      "speed": "65 км/ч",
+      "limit": "7 часов",
+      "price": "77 060",
+      "checkpoint": "ХИТ",
+      "recomendation": "Для города",
+      "image": "https://kugoo.kg/storage/vehicles/June2023/Ki0CieRe9elTGGuCp17f.jpg",
+      "ready": "false",
+      "count": 1
+    },
+    {
+      "id": "7",
+      "title": "KUGOO M5",
+      "mAh": "6000 mAh",
+      "power": "1,2 л.с.",
+      "speed": "65 км/ч",
+      "limit": "7 часов",
+      "price": "77 060",
+      "checkpoint": "ХИТ",
+      "recomendation": "Для города",
+      "image": "https://kugoo.kg/storage/vehicles/March2023/Lia9sceW785fYMyqekNk.jpg",
+      "ready": "false",
+      "count": 1
+    },
+    {
+      "id": "8",
+      "title": "KUGOO M5",
+      "mAh": "6000 mAh",
+      "power": "1,2 л.с.",
+      "speed": "65 км/ч",
+      "limit": "7 часов",
+      "price": "77 060",
+      "checkpoint": "ХИТ",
+      "recomendation": "Для города",
+      "image": "https://kugoo.kg/storage/vehicles/May2025/vwCQuA3YjLz0O8VR5j9i.webp",
+      "ready": "false",
+      "count": 1
+    }
+  ]
+}

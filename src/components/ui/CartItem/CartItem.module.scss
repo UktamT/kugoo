@@ -1,0 +1,71 @@
+.root{
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  justify-content: space-between;
+  width: 850px;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(223, 220, 220);
+}
+
+.image{
+  width: 80px;
+  height: 80px;
+}
+.isReady{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.colorGreen{
+  width: 7px;
+  height: 7px;
+  background-color: rgb(72, 231, 72);
+  border-radius: 50%;
+}
+
+.colorRed{
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.title{
+  font-weight: 500;
+  font-size: 18px;
+  width: 330px;
+}
+
+.isIt{
+  font-weight: 400;
+  font-size: 12px;
+  color: #5D6C7B;
+} 
+
+.count{
+  background: #F4F7FB;
+  padding: 7px 15px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 117px;
+}
+
+.price{
+font-weight: 400;
+font-size: 20px;
+
+}
+
+.trashIcon{
+  cursor: pointer;
+}
